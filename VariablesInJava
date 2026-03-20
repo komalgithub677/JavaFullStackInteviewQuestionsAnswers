@@ -1,0 +1,300 @@
+JAVA VARIABLES INTERVIEW QUESTIONS:
+
+1. What are variables in Java? Types?
+👉 Answer (spoken):
+Variables are named memory locations used to store data. In Java, we have three types: local variables, instance variables, and static variables.
+👉 Technical Example:
+class Student {
+    static String college = "ABC"; // static
+    int id; // instance
+
+    void display() {
+        int marks = 90; // local
+    }
+}
+👉 Real-world:
+Static → shared (company name)
+Instance → per object (user data)
+Local → temporary (method calculation)
+Variable type determines its lifecycle, scope, and memory allocation.
+
+2. Difference between instance and static variables
+👉 Answer:
+
+Instance	                    Static
+Per object	                Shared
+Stored in heap	Stored in method area
+Access via object	Access via class
+class Test {
+    int a = 10; // instance
+    static int b = 20; // static
+}
+
+Changing static variable affects all objects.
+Static variables belong to class, not object
+
+3. Why local variables don’t have default values?
+👉 Answer:
+Because they are stored in stack and Java enforces initialization to avoid garbage values.
+int x;
+System.out.println(x); // Compile-time error
+👉 Real-world:
+Prevents unpredictable bugs in calculations
+👉 Follow-up:
+Why instance variables have defaults?
+Java prioritizes safety over convenience for local variables.
+
+4. Where are variables stored in memory?
+👉 Answer:
+Local → Stack
+Instance → Heap
+Static → Method Area
+👉 Technical Example:
+int x = 10; // stack
+Student s = new Student(); // object in heap
+👉 Follow-up:
+What happens when stack overflows?
+👉 Impress line:
+“Stack handles execution, heap handles object storage.
+
+5. What is final variable?
+👉 Answer:
+A final variable cannot be reassigned once initialized.
+👉 Technical Example:
+final int x = 10;
+x = 20; // error
+👉 Tricky Case:
+final List<Integer> list = new ArrayList<>();
+list.add(10); // allowed
+👉 Real-world:
+Constants like API keys
+👉 Follow-up:
+Difference between final and immutability?
+👉 Impress line:
+“final prevents reassignment, not object modification.”
+
+6. What is effectively final variable? (Java 8)
+👉 Answer:
+A variable that is not declared final but never modified.
+👉 Example:
+int x = 10;
+Runnable r = () -> System.out.println(x); // allowed
+👉 Tricky:
+If you modify x → compilation error
+👉 Follow-up:
+Why required in lambda?
+👉 Impress line:
+“Lambda captures only effectively final variables for thread safety.”
+
+7. Can we declare static local variables in Java?
+👉 Answer:
+No, Java does not allow static local variables.
+👉 Tricky Example:
+void test() {
+    static int x = 10; // ❌ error
+}
+👉 Reason:
+Local variables belong to stack frame, static belongs to class
+👉 Follow-up:
+Why allowed in C++ but not Java?
+👉 Impress line:
+“Java avoids complexity of static state inside stack frames.”
+
+
+8. What happens if we don’t initialize instance variable?
+👉 Answer:
+Java assigns default values.
+👉 Defaults:
+int → 0
+boolean → false
+object → null
+👉 Example:
+class Test {
+    int x;
+    void show() {
+        System.out.println(x); // 0
+    }
+}
+👉 Follow-up:
+Why no default for local?
+👉 Impress line:
+“Default initialization is JVM responsibility, not compiler.”
+
+
+9. Difference between final, static final, and constant
+👉 Answer:
+Type	Meaning
+final	 cannot change
+static final	 constant shared across class
+👉 Example:
+static final double PI = 3.14;
+👉 Real-world:
+Used in utility classes
+👉 Follow-up:
+Where constants stored?
+👉 Impress line:
+“static final variables are compile-time constants if primitive or String.”
+
+10. What is variable shadowing?
+👉 Answer:
+When local variable hides instance variable.
+👉 Example:
+class Test {
+    int x = 10;
+    void show() {
+        int x = 20;
+        System.out.println(x); // 20
+    }
+}
+👉 Fix:
+System.out.println(this.x); // 10
+👉 Follow-up:
+Why avoid shadowing?
+👉 Impress line:
+“Shadowing reduces code readability and increases bugs.”
+
+11. What is transient variable?
+👉 Answer:
+Used to skip variable during serialization.
+👉 Example:
+transient int password;
+👉 Real-world:
+Sensitive data like passwords not saved
+👉 Follow-up:
+What is serialization?
+👉 Impress line:
+“transient improves security in object persistence.”
+
+12. What is volatile variable?
+👉 Answer:
+Ensures visibility of changes across threads.
+👉 Example:
+volatile boolean flag = true;
+👉 Real-world:
+Stopping a thread safely
+👉 Follow-up:
+volatile vs synchronized?
+👉 Impress line:
+“volatile guarantees visibility, not atomicity.”
+
+13. What is default value of variables?
+👉 Answer:
+Only instance and static variables get defaults.
+👉 Example:
+int x; // 0
+boolean b; // false
+👉 Follow-up:
+Why String default null?
+👉 Impress line:
+“Reference types default to null, not empty objects.”
+
+14. What is var keyword (Java 10)?
+👉 Answer:
+Allows type inference for local variables.
+👉 Example:
+var x = 10; // int
+var name = "Komal"; // String
+👉 Tricky:
+Cannot use without initialization
+👉 Follow-up:
+Can var be used for instance variables?
+👉 Impress line:
+“var improves readability but does not make Java dynamically typed.”
+
+15. Can we declare variables without type?
+👉 Answer:
+No, Java is statically typed (except var inference)
+👉 Tricky:
+var x; // ❌ error
+👉 Follow-up:
+Difference between dynamic typing?
+👉 Impress line:
+“Java enforces strong typing at compile time.”
+
+16. What is constant pool in Java?
+👉 Answer:
+Memory area where String literals are stored
+👉 Example:
+String s1 = "Java";
+String s2 = "Java"; // same reference
+👉 Follow-up:
+What about new String()?
+👉 Impress line:
+“String pool improves memory efficiency.”
+
+17. What is variable scope?
+👉 Answer:
+Region where variable is accessible
+👉 Types:
+Local
+Instance
+Static
+👉 Example:
+if(true) {
+    int x = 10;
+}
+// x not accessible here
+👉 Follow-up:
+What is block scope?
+👉 Impress line:
+“Smaller scope improves maintainability.”
+
+19. What is type casting in variables?
+👉 Answer:
+Converting one data type into another
+👉 Example:
+int x = (int) 10.5; // explicit
+👉 Real-world:
+Data conversion from DB to API
+👉 Follow-up:
+Implicit vs explicit?
+👉 Impress line:
+“Explicit casting may cause data loss.”
+
+Scenario Based Questions:
+1. What will be the output? (String Pool Trap)
+String s1 = "Java";
+String s2 = "Java";
+String s3 = new String("Java");
+System.out.println(s1 == s2);
+System.out.println(s1 == s3);
+System.out.println(s1.equals(s3));
+👉 Answer (spoken):
+First is true, second is false, third is true.
+👉 Explanation:
+s1 & s2 → same string pool reference
+s3 → new object in heap
+equals() compares content
+👉 Real-world:
+Comparing user input strings vs stored constants
+👉 Follow-up:
+How to force string pool usage?
+👉 Impress line:
+“String pool avoids duplicate objects for memory optimization.”
+
+2. What will be the output? (Final + Object)
+final List<Integer> list = new ArrayList<>();
+list.add(10);
+list.add(20);
+System.out.println(list);
+👉 Answer:
+[10, 20]
+👉 Explanation:
+final prevents reassignment, not modification
+👉 Follow-up:
+Can we reassign list?
+👉 Impress line:
+“final reference ≠ immutable object.”
+
+
+
+
+
+
+
+
+
+
+
+
+
