@@ -1,0 +1,206 @@
+JAVA KEYWORDS - 50 TRICKY INTERVIEW QUESTIONS WITH EXPLANATIONS
+
+1. Can we use 'goto' as a variable name?
+Answer: No.
+Why: 'goto' is a reserved keyword (even though unused), so compiler blocks it.
+
+2. Why is 'const' reserved but not used?
+Answer: Reserved for future use.
+Why: To maintain backward compatibility and avoid breaking future features.
+
+3. Can keywords be used as identifiers?
+Answer: No.
+Why: Compiler reserves them for predefined functionality.
+
+4. Difference between final, finally, finalize?
+Answer:
+final → constant/lock behavior
+finally → executes always in exception
+finalize → GC cleanup method
+Why: Each serves different lifecycle stages.
+
+5. Can final variable be reassigned?
+Answer: No.
+Why: Memory reference is fixed once assigned.
+
+6. Can final object change?
+Answer: Yes.
+Why: Reference is constant, but object data can mutate.
+
+7. Can final method be overridden?
+Answer: No.
+Why: Prevents modification of behavior.
+
+8. Can final class be inherited?
+Answer: No.
+Why: Security and immutability (e.g., String).
+
+9. Can static method access instance variable?
+Answer: No.
+Why: Static belongs to class, instance belongs to object.
+
+10. Why main method is static?
+Answer: JVM calls it without object.
+Why: No instance created before program starts.
+
+11. Can static methods be overridden?
+Answer: No (only hidden).
+Why: Method binding is compile-time.
+
+12. Can we use 'this' in static context?
+Answer: No.
+Why: No object reference exists.
+
+13. Can we use 'super' in static method?
+Answer: No.
+Why: Requires object context.
+
+14. What happens if we remove 'public' from main?
+Answer: JVM cannot access it.
+Why: Entry point must be public.
+
+15. Can we use 'break' outside loop?
+Answer: No.
+Why: It only works in loops/switch.
+
+16. Can 'continue' be used in switch?
+Answer: No.
+Why: Only loops support continue.
+
+17. What is 'instanceof' used for?
+Answer: Type checking.
+Why: Ensures safe casting.
+
+18. Can we override private methods?
+Answer: No.
+Why: Not visible to subclass.
+
+19. Can abstract method have body?
+Answer: No.
+Why: It's incomplete by design.
+
+20. Can abstract class have constructor?
+Answer: Yes.
+Why: Used for initialization.
+
+21. Can interface have static methods?
+Answer: Yes (Java 8+).
+Why: Supports utility methods.
+
+22. Can interface have private methods?
+Answer: Yes (Java 9+).
+Why: For internal reuse.
+
+23. What is 'volatile'?
+Answer: Ensures visibility in threads.
+Why: Prevents caching issues.
+
+24. What is 'transient'?
+Answer: Skips serialization.
+Why: Sensitive data protection.
+
+25. What is 'synchronized'?
+Answer: Thread locking.
+Why: Prevents race conditions.
+
+26. Can constructor be final?
+Answer: No.
+Why: Constructors are not inherited.
+
+27. What is 'native'?
+Answer: Calls C/C++ code.
+Why: For system-level operations.
+
+28. Can we return from void method?
+Answer: Yes (without value).
+Why: Ends execution early.
+
+29. What is 'default' in switch?
+Answer: Fallback case.
+Why: Executes when no match.
+
+30. What is 'enum'?
+Answer: Fixed constants.
+Why: Type safety.
+
+31. Can enum extend class?
+Answer: No.
+Why: Already extends Enum class.
+
+32. What is 'assert'?
+Answer: Debug check.
+Why: Detect logical errors.
+
+33. Can we use 'null' as variable?
+Answer: No.
+Why: Reserved literal.
+
+34. Are true/false keywords?
+Answer: Yes.
+Why: Boolean literals.
+
+35. Can static block run without main?
+Answer: Yes (older JVM behavior).
+Why: Class loading triggers it.
+
+36. Can we declare multiple public classes?
+Answer: No.
+Why: File name must match class.
+
+37. Can we override static method?
+Answer: No.
+Why: Compile-time binding.
+
+38. Can final method be overloaded?
+Answer: Yes.
+Why: Overloading ≠ overriding.
+
+39. Can abstract class be final?
+Answer: No.
+Why: Contradiction (cannot extend).
+
+40. Can we use 'this()' and 'super()' together?
+Answer: No.
+Why: Both must be first statement.
+
+41. What happens if no constructor?
+Answer: Default constructor created.
+Why: Compiler provides it.
+
+42. Can we make interface final?
+Answer: No.
+Why: Interfaces are meant to be implemented.
+
+43. Can variable be both static and final?
+Answer: Yes.
+Why: Creates constant (e.g., PI).
+
+44. Can we synchronize static method?
+Answer: Yes.
+Why: Locks class object.
+
+45. Can we use return in static block?
+Answer: No.
+Why: Not allowed syntactically.
+
+46. Can we override main method?
+Answer: No.
+Why: JVM calls only standard signature.
+
+47. Can abstract class have static method?
+Answer: Yes.
+Why: Belongs to class, not object.
+
+48. Can we use 'super' in constructor?
+Answer: Yes.
+Why: Calls parent constructor.
+
+49. Can we call constructor using 'this'?
+Answer: Yes.
+Why: Constructor chaining.
+
+50. Can we use keyword as package name?
+Answer: No.
+Why: Compiler restriction.
+
+--- END ---
