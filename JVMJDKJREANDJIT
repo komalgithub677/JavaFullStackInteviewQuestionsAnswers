@@ -1,0 +1,199 @@
+JDK, JRE, JVM – 50 TRICKY INTERVIEW QUESTIONS WITH WHY + TECHNICAL EXAMPLES
+
+1. What is JVM?
+Answer: JVM (Java Virtual Machine) executes Java bytecode.
+Why: It provides platform independence.
+Example: .class file runs on any OS with JVM.
+
+2. What is JRE?
+Answer: JRE = JVM + libraries.
+Why: Required to run Java programs.
+Example: Running Java app without compiler.
+
+3. What is JDK?
+Answer: JDK = JRE + Development tools.
+Why: Needed to develop Java programs.
+Example: javac compiles code.
+
+4. Can we run Java without JDK?
+Answer: Yes (using JRE).
+Why: Execution needs JVM, not compiler.
+
+5. Can we compile Java without JRE?
+Answer: No.
+Why: JDK already includes JRE.
+
+6. What is bytecode?
+Answer: Intermediate code (.class file).
+Why: Platform-independent execution.
+Example: javac Test.java → Test.class
+
+7. Who converts bytecode to machine code?
+Answer: JVM.
+Why: Uses interpreter/JIT compiler.
+
+8. What is JIT compiler?
+Answer: Converts bytecode to native code at runtime.
+Why: Improves performance.
+Example: Frequently used methods optimized.
+
+9. Is JVM platform dependent?
+Answer: Yes.
+Why: Each OS has its own JVM implementation.
+
+10. Is Java platform independent?
+Answer: Yes.
+Why: Bytecode runs on any JVM.
+
+11. Can we install JRE without JDK?
+Answer: Yes.
+Why: Only runtime needed.
+
+12. Can we install JDK without JRE?
+Answer: No.
+Why: JDK includes JRE.
+
+13. What is classloader?
+Answer: Loads classes into memory.
+Why: Dynamic loading.
+Example: Loads Test.class at runtime.
+
+14. Types of classloaders?
+Answer: Bootstrap, Extension, Application.
+Why: Organized loading hierarchy.
+
+15. What is Heap memory?
+Answer: Object storage area.
+Why: Dynamic memory allocation.
+Example: new Object() stored here.
+
+16. What is Stack memory?
+Answer: Stores method calls.
+Why: Faster access.
+Example: method execution frames.
+
+17. What is Method Area?
+Answer: Stores class metadata.
+Why: Needed for execution.
+
+18. What is Garbage Collection?
+Answer: Automatic memory cleanup.
+Why: Removes unused objects.
+Example: object = null → eligible for GC.
+
+19. Can we force GC?
+Answer: No (only request).
+Why: JVM decides execution.
+
+20. What is Runtime class?
+Answer: Provides runtime info.
+Why: Interaction with JVM.
+
+21. What is JNI?
+Answer: Java Native Interface.
+Why: Connects Java with C/C++.
+
+22. What is interpreter in JVM?
+Answer: Executes bytecode line by line.
+Why: Simplicity but slower.
+
+23. Difference between JIT and Interpreter?
+Answer: JIT compiles, interpreter executes line-by-line.
+Why: JIT is faster.
+
+24. Can JVM run non-Java code?
+Answer: Yes (via bytecode).
+Why: Any language compiled to bytecode works.
+
+25. Example of non-Java JVM language?
+Answer: Kotlin, Scala.
+Why: They compile to bytecode.
+
+26. What is execution engine?
+Answer: Part of JVM.
+Why: Executes bytecode.
+
+27. What is verification phase?
+Answer: Checks bytecode safety.
+Why: Security.
+
+28. What is linking phase?
+Answer: Prepares classes.
+Why: Memory allocation.
+
+29. What is initialization phase?
+Answer: Assigns values.
+Why: Final step before execution.
+
+30. What is classpath?
+Answer: Path to locate classes.
+Why: JVM needs it.
+
+31. Can we run Java program without main?
+Answer: Yes (static block in older versions).
+Why: Class loading triggers execution.
+
+32. What is bootstrap classloader?
+Answer: Loads core Java classes.
+Why: Foundational classes.
+
+33. What is extension classloader?
+Answer: Loads extension libraries.
+
+34. What is application classloader?
+Answer: Loads user classes.
+
+35. What is JVM architecture?
+Answer: Classloader + Memory + Execution Engine.
+
+36. Why Java is secure?
+Answer: Bytecode verification.
+Why: Prevents unsafe code.
+
+37. What is OutOfMemoryError?
+Answer: Heap memory full.
+Why: No space for objects.
+
+38. What is StackOverflowError?
+Answer: Stack full.
+Why: Infinite recursion.
+
+39. Can JVM be written in Java?
+Answer: No (needs native support).
+
+40. What is HotSpot JVM?
+Answer: Optimized JVM.
+Why: Better performance.
+
+41. What is AOT compilation?
+Answer: Compile before execution.
+Why: Faster startup.
+
+42. What is dynamic class loading?
+Answer: Load classes at runtime.
+
+43. What is memory leak in Java?
+Answer: Unused objects not GC’d.
+
+44. What is permgen/metaspace?
+Answer: Class metadata storage.
+
+45. What happens when JVM starts?
+Answer: Loads classes → executes main.
+
+46. Can multiple JVM run?
+Answer: Yes.
+
+47. What is thread stack?
+Answer: Each thread has its own stack.
+
+48. What is daemon thread?
+Answer: Background thread.
+
+49. What is JVM shutdown?
+Answer: Ends execution.
+
+50. Why JVM is important?
+Answer: Platform independence + memory management.
+
+--- END ---
