@@ -1,0 +1,73 @@
+A thread is the smallest unit of execution within a program
+Thread is a lightweight process that executes a part of a program.
+Example:
+Playing the music , while downloading the file
+
+
+Multithreading:
+Multithreading means executing multiple threads simultaneously within a single program.
+
+Advantages:
+Improves performance
+Saves time (parallel execution)
+Better CPU utilization
+Smooth user experience (no freezing UI)
+
+How we can achieve the mutithreading:
+1) by using the thread class:
+class MyThread extends Thread {
+    public void run() {
+        System.out.println("Thread is running...");
+    }
+
+    public static void main(String[] args) {
+        MyThread t1 = new MyThread();
+        t1.start(); // starts thread
+    }
+}
+
+2)by implementing the runnable interface
+
+class MyRunnable implements Runnable {
+    public void run() {
+        System.out.println("Thread is running...");
+    }
+    public static void main(String[] args) {
+        MyRunnable obj = new MyRunnable();
+        Thread t1 = new Thread(obj);
+        t1.start();
+    }
+}
+
+States of the thread:
+
+1. New
+👉 Thread is created but not started
+
+2. Runnable
+👉 Thread is ready to run (waiting for CPU)
+
+3. Running
+👉 Thread is executing
+
+4. Waiting / Blocked
+👉 Thread is waiting for resource or another thread
+
+5. Terminated (Dead)
+👉 Execution completed
+
+VIMP: Important Methods in Thread
+start() → starts thread
+run() → contains code
+sleep() → pause thread
+join() → wait for another thread
+isAlive() → checks if thread is running
+
+
+Real-Life Examples
+✔️ 1. Web Browser
+Multiple tabs → multiple threads
+✔️ 2. Gaming
+Sound, graphics, input → different threads
+✔️ 3. Banking App
+Balance check + transaction simultaneously
