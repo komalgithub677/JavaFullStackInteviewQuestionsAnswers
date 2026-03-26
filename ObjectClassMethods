@@ -1,0 +1,10 @@
+Object class is the parent class of all the classes by default . all the classes are inherited from the object class
+toString() → Returns a string representation of the object.
+equals(Object obj) → Compares two objects for logical equality.
+hashCode() → Returns a unique integer hash value for the object.
+getClass() → Returns the runtime class of the object.
+clone() → Creates and returns a copy of the object.
+finalize() → Called before an object is garbage collected (deprecated).
+wait() → Causes current thread to wait until notified.
+notify() → Wakes up one waiting thread.
+notifyAll() → Wakes up all waiting threads.
