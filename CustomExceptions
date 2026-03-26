@@ -1,0 +1,59 @@
+ A custom exception is a user-defined exception created by the programmer to handle specific business logic errors.
+custom exception are the class created by the user by extending the Exception class and the RuntimeException class
+
+why we are using that?
+Defalut exception are genrics but in the real project we need the meaningful exception handling messages 
+for example :
+Invlaid age exception 
+Insufficient balance exception
+Invalid email exception
+
+How we can create the cusotm exception
+step 1:
+create the class that extends check or uncheck exception 
+
+class InvalidAgeException extends Exception {
+    public InvalidAgeException(String message) {
+        super(message);
+    }
+}
+
+Step 2:
+use it with the throw
+
+public class TestCustomException {
+
+    static void checkAge(int age) throws InvalidAgeException {
+        if (age < 18) {
+            throw new InvalidAgeException("Age must be 18 or above");
+        } else {
+            System.out.println("Eligible to vote");
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            checkAge(16);
+        } catch (InvalidAgeException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+
+Types of Custom Exceptions
+1)checked custom exception
+2)Unchecked custome exception
+
+
+used in :
+✔️ Banking System
+InsufficientBalanceException
+✔️ Login System
+InvalidCredentialsException
+✔️ E-commerce
+ProductOutOfStockException
+
+✔ Always extend Exception or RuntimeException
+✔ Use constructor to pass message
+✔ Use throw to trigger it
+✔ Use throws to declare it
