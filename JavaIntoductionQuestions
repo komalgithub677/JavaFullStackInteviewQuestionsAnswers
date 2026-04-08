@@ -5,3 +5,49 @@ software applications.Java is used to build the programmes like mobile apps , we
 It is object-oriented means it organizes code uisng the objects like real world things to make programs easier to design and manage.It is known for being secure 
 reliable and widely used.
 
+Why we use java"
+Java is preferred beacaue the platform indepence,Because java uses jvm , jdk , jre and due to jvm java code become the platform 
+independent and that can be run on any plaform ,Same code java can be run on windows linux , mac os,
+Compare to low level language java is easy to learn ,syntax is simple and clean , easier than c++ ,That's why beginners and the
+companies both preferred java
+It is an object oriented programming :
+Everything is based on the objects and the classes .Helps in code reuse , better debugging and the better struture.Strong memory
+management.Java has automatic garbage collection , No need to manually free memory 
+huge community and the support :
+Millions of developers use java , if you get stuck at any point tons of tutorials , libraries , frameworks(Hibernate , Spring)
+if you get stuck solution is easily available.
+Secure language:
+No direct memory access ,built in security features , that's why java used in banking apps ,Enterprise apps ,
+High demand in jobs:
+widely used in android apps ,backend development , Enterprise systems 
+Multithreading support: Can run the multiple tasks at the one time 
+
+Difference between Python , Java , C++
+
+Language                       Type                                      Best for
+Java                    Object-oriented                    Enterprise apps , android
+Python                  High-Level ,simple                 Aiml/Scrippting/Data science
+C++                     Low-Level OOp                       System Programming , Games
+
+Features of Java , Python , C++
+
+| Feature           | Java       | Python    | C++         |
+| ----------------- | ---------- | --------- | ----------- |
+| Ease of Learning  | Medium     | Easy      | Hard        |
+| Speed             | Medium     | Slow      | Fast        |
+| Memory Management | Automatic  | Automatic | Manual      |
+| Use Case          | Enterprise | AI/Data   | System/Game |
+| Syntax Length     | Long       | Short     | Medium      |
+
+
+
+
+
+
+
+
+
+
+
+
+
