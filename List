@@ -1,0 +1,361 @@
+1. What is List?
+👉 The List interface in Java is a part of the Java Collections Framework that represents an ordered collection of elements.
+
+Position in Hierarchy:
+
+Iterable
+   ↓
+Collection
+   ↓
+List  ← (Focus here)
+Classes like ArrayList, LinkedList, Vector, Stack implement List
+
+3. Key Characteristics of List:
+ Maintains insertion order
+ Allows duplicate elements
+ Allows null values
+ Supports index-based access
+ Dynamic size (can grow/shrink)
+
+4. Important Methods in List
+🔹 Adding Elements
+add(E e)
+add(int index, E element)
+🔹 Removing Elements
+remove(int index)
+remove(Object o)
+🔹 Accessing Elements
+get(int index)
+set(int index, E element)
+🔹 Searching
+indexOf(Object o)
+lastIndexOf(Object o)
+🔹 Size
+size()
+
+What is ArrayList?
+ArrayList is a resizable array implementation of the List interface in Java that allows duplicate elements and provides 
+fast random access.
+
+Key Features of ArrayList
+✔ Dynamic size (automatically grows/shrinks)
+✔ Maintains insertion order
+✔ Allows duplicates
+✔ Allows null values
+✔ Fast access using index
+❌ Not synchronized (not thread-safe by default)
+
+Important Methods in ArrayList
+🔹 1. Adding Elements
+add(E e)
+add(int index, E element)
+
+👉 Example:
+
+list.add("A");
+list.add(1, "B");
+🔹 2. Removing Elements
+remove(int index)
+remove(Object o)
+
+👉 Example:
+
+list.remove(0);
+list.remove("A");
+🔹 3. Accessing Elements
+get(int index)
+
+👉 Example:
+
+list.get(1);
+🔹 4. Updating Elements
+set(int index, E element)
+
+👉 Example:
+
+list.set(1, "C");
+🔹 5. Size of List
+size()
+🔹 6. Searching
+contains(Object o)
+indexOf(Object o)
+lastIndexOf(Object o)
+🔹 7. Iteration Methods
+for loop
+for-each loop
+Iterator
+ListIterator
+🔹 8. Clearing Elements
+clear()
+🔹 9. Checking Empty
+isEmpty()
+🚀 Example Program
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+
+        list.add("Java");
+        list.add("Python");
+        list.add("Java"); // duplicate allowed
+
+        System.out.println(list.get(1)); // Python
+
+        list.remove("Java");
+
+        System.out.println(list.size());
+    }
+}
+⚖️ Time Complexity (Important)
+Operation	Time
+Access	O(1)
+Add (end)	O(1)
+Add (middle)	O(n)
+Remove	O(n)
+🧠 When to Use ArrayList?
+
+👉 Use when:
+
+You need fast access
+You don’t insert/delete frequently
+Order matters
+⚠️ Limitations
+Slow insertion/deletion (shifting required)
+Not thread-safe
+Wastes memory when resizing
+
+1. What is a Linked List?
+👉 A Linked List is a linear data structure where elements are stored as nodes, and each node contains:
+Data
+Reference (pointer) to next node
+
+[ Data | Next Address ]
+
+3. Types of Linked List
+🔹 1. Singly Linked List
+One pointer → next node
+Traversal only forward
+🔹 2. Doubly Linked List
+Two pointers → previous & next
+Traverse both directions
+🔹 3. Circular Linked List
+Last node points to first
+Forms a loop
+
+4. LinkedList in Java
+👉 Java provides LinkedList class in java.util
+Implements:
+List
+Deque
+Queue
+
+5. Key Features:
+✔ Dynamic size
+✔ Fast insertion & deletion
+✔ No memory wastage like arrays
+✔ Allows duplicates
+✔ Maintains order
+
+6. Important Methods in Java LinkedList
+🔹 Adding Elements
+add(E e)
+addFirst(E e)
+addLast(E e)
+🔹 Removing Elements
+remove()
+removeFirst()
+removeLast()
+🔹 Accessing Elements
+get(int index)
+getFirst()
+getLast()
+🔹 Updating
+set(int index, E element)
+🔹 Queue/Deque Methods
+offer()
+poll()
+peek()
+🔄 7. Operations in Linked List
+🔹 1. Insertion
+Beginning → O(1)
+Middle → O(n)
+End → O(1)
+🔹 2. Deletion
+Beginning → O(1)
+Middle → O(n)
+🔹 3. Traversal
+O(n)
+
+Difference between the linkedList and the ArrayList:
+
+| Feature       | LinkedList | ArrayList |
+| ------------- | ---------- | --------- |
+| Structure     | Nodes      | Array     |
+| Access        | Slow       | Fast      |
+| Insert/Delete | Fast       | Slow      |
+| Memory        | More       | Less      |
+
+Technical example of the LinkedList:
+Browsers like Google Chrome use Doubly Linked List
+How it works:
+Each webpage = node
+prev → previous page
+next → next page
+👉 When you click:
+Back → move to previous node
+Forward → move to next node
+
+Used in editors like Microsoft Word
+How it works:
+Each action = node
+Undo → go backward
+Redo → go forward
+
+Linked Lists are used in real-world applications like browser history, music playlists, undo-redo systems, LRU cache,
+process scheduling, and HashMap collision handling because they allow efficient insertion, deletion, and bidirectional 
+traversal.
+
+1. What is Vector?
+👉 Vector is a legacy class in Java that implements the List interface and represents a dynamic array 
+that is synchronized (thread-safe).
+Vector is a synchronized dynamic array in Java that allows duplicate elements and maintains insertion order.
+
+Iterable
+   ↓
+Collection
+   ↓
+List
+   ↓
+Vector
+   ↓
+Stack
+
+Vector is a parent class of Stack
+
+3. Key Features of Vector
+✔ Dynamic size (like ArrayList)
+✔ Maintains insertion order
+✔ Allows duplicates
+✔ Allows null values
+✔ Thread-safe (synchronized)
+✔ Legacy class (introduced in Java 1.0)
+
+5. Important Methods in Vector
+🔹 Adding Elements
+add(E e)
+addElement(E obj)   // legacy
+add(int index, E element)
+
+🔹 Removing Elements
+remove(int index)
+remove(Object o)
+removeElement(Object obj) // legacy
+
+🔹 Accessing Elements
+get(int index)
+elementAt(int index) // legacy
+firstElement()
+lastElement()
+
+🔹 Updating Elements
+set(int index, E element)
+setElementAt(E obj, int index)
+
+🔹 Capacity Methods (Special)
+capacity()
+ensureCapacity(int minCapacity)
+trimToSize()
+
+👉 Unique feature of Vector 🔥
+🔹 Size & Utility
+size()
+isEmpty()
+clear()
+contains(Object o)
+
+🔄 6. Traversal Methods
+for loop
+for-each loop
+Iterator
+Enumeration (legacy) 🔥
+Enumeration e = vector.elements();
+while(e.hasMoreElements()) {
+    System.out.println(e.nextElement());
+}
+
+| Feature         | Vector    | ArrayList |
+| --------------- | --------- | --------- |
+| Thread Safety   | ✅ Yes     | ❌ No      |
+| Performance     | Slow      | Fast      |
+| Synchronization | Automatic | Manual    |
+| Legacy          | Yes       | No        |
+
+8. Constructors of Vector
+Vector()
+Vector(int capacity)
+Vector(int capacity, int increment)
+Vector(Collection c)
+
+9. Time Complexity
+
+| Operation     | Time |
+| ------------- | ---- |
+| Access        | O(1) |
+| Add           | O(1) |
+| Insert/Delete | O(n) |
+
+10. When to Use Vector?
+
+👉 Use when:
+Thread safety is required
+Multiple threads access data
+
+👉 But nowadays:
+Prefer ArrayList + Collections.synchronizedList()
+⚠️ 11. Limitations
+Slower due to synchronization ❌
+Legacy (not recommended in modern apps) ❌
+More overhead ❌
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Vector<Integer> v = new Vector<>();
+
+        v.add(10);
+        v.add(20);
+        v.add(30);
+
+        System.out.println(v.get(1)); // 20
+
+        v.remove(0);
+
+        System.out.println(v);
+    }
+}
+
+13. Real-Life Use
+👉 Used in multithreaded applications
+👉 Earlier used in:
+Legacy systems
+Thread-safe operations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
