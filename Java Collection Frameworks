@@ -1,0 +1,126 @@
+🔥 What is Java Collections Framework?
+The Java Collections Framework (JCF) is a set of classes and interfaces in Java that helps you store, manage, and manipulate
+groups of data (objects) efficiently.
+👉 Instead of writing your own data structures (like arrays, linked lists), Java already provides ready-made ones.
+
+Collection Frameworks Hierarchy?
+Iterable
+   └─ Collection
+         ├── List
+         │     ├── ArrayList
+         │     ├── LinkedList
+         │     ├── Vector
+         │     │     └── Stack
+         │
+         ├── Set
+         │     ├── HashSet
+         │     ├── LinkedHashSet
+         │     └── SortedSet
+         │            └── NavigableSet
+         │                   └── TreeSet
+         │
+         └── Queue
+               ├── PriorityQueue
+               └── Deque
+                      ├── ArrayDeque
+                      └── LinkedList
+
+Map (Separate)
+   ├── HashMap
+   ├── LinkedHashMap
+   ├── Hashtable
+   └── SortedMap
+          └── NavigableMap
+                 └── TreeMap
+
+1. What is Iterable?
+👉 Iterable is the root interface of the Java Collections Framework that allows objects to be traversed (iterated)
+one by one.
+2. Package & Syntax:
+Package: java.lang
+Declaration:
+public interface Iterable<T>
+👉 It uses generics (<T>) → works with any data type
+
+3. Position in Hierarchy
+Iterable (Top)
+   ↓
+Collection
+   ↓
+List / Set / Queue
+
+👉 All collections like ArrayList, HashSet, LinkedList implement Iterable
+
+4. Methods in Iterable
+🔹 Main Method
+Iterator<T> iterator();
+👉 Returns an Iterator to traverse elements
+
+Default Methods (Java 8+)
+1. forEach()
+default void forEach(Consumer<? super T> action)
+👉 Applies action to each element
+list.forEach(n -> System.out.println(n));
+2. spliterator()
+default Spliterator<T> spliterator();
+👉 Used for parallel processing (advanced)
+
+Steps:
+Call iterator()
+Use hasNext() → check next element
+Use next() → get element
+
+Using for-each loop
+List<Integer> list = new ArrayList<>();
+list.add(10);
+list.add(20);
+
+for (int num : list) {
+    System.out.println(num);
+}
+
+👉 Works because List implements Iterable
+
+Using Iterator explicitly
+Iterator<Integer> it = list.iterator();
+
+while (it.hasNext()) {
+    System.out.println(it.next());
+}
+
+| Feature | Iterable         | Iterator              |
+| ------- | ---------------- | --------------------- |
+| Type    | Interface        | Interface             |
+| Purpose | Provide iterator | Traverse elements     |
+| Method  | `iterator()`     | `hasNext()`, `next()` |
+| Usage   | for-each loop    | Manual traversal      |
+
+8. Why Iterable is Important
+Enables for-each loop 
+Provides standard way to traverse collections 
+Reduces complexity (no index needed) 
+Works with all major collections 
+
+9. Limitations
+Cannot move backwards ❌
+Cannot access index ❌
+Only forward traversal ❌
+
+11. Key Points to Remember
+Root interface of collections
+Present in java.lang
+Uses generics
+Only one abstract method → iterator()
+Enables for-each loop
+Works with Iterator internally
+
+
+
+
+
+
+
+
+
+
+
