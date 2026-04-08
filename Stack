@@ -1,0 +1,213 @@
+1. What is Stack?
+👉 Stack is a linear data structure that follows the LIFO principle (Last In, First Out).
+🎯 Interview Definition
+👉 Stack is a class in Java that represents a LIFO data structure where the last inserted element is the first one to be removed.
+
+Iterable
+   ↓
+Collection
+   ↓
+List
+   ↓
+Vector
+   ↓
+Stack
+
+Stack extends Vector (inherits all its methods)
+4. Important Methods in Stack
+🔹 1. push()
+push(E item)
+👉 Adds element to top
+🔹 2. pop()
+pop()
+👉 Removes and returns top element
+🔹 3. peek()
+peek()
+👉 Returns top element without removing
+🔹 4. empty()
+empty()
+👉 Checks if stack is empty
+🔹 5. search()
+search(Object o)
+👉 Returns position from top
+⚙️ 5. Other Inherited Methods (from Vector)
+add(), remove()
+get()
+size()
+isEmpty()
+⏱️ 6. Time Complexity
+Operation	Time
+Push	O(1)
+Pop	O(1)
+Peek	O(1)
+
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Stack<Integer> stack = new Stack<>();
+
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+
+        System.out.println(stack.peek()); // 30
+
+        System.out.println(stack.pop());  // 30
+
+        System.out.println(stack);
+    }
+}
+
+Stack vs Queue?
+| Feature | Stack | Queue |
+| ------- | ----- | ----- |
+| Order   | LIFO  | FIFO  |
+| Insert  | Top   | Rear  |
+| Remove  | Top   | Front |
+
+10. Limitations of Stack
+Limited access (only top element) ❌
+Stack overflow if too many elements ❌
+Legacy class (extends Vector) ❌
+
+1. What is Queue?
+👉 Queue is a linear data structure that follows the FIFO principle (First In, First Out).
+Queue is an interface in Java that represents a collection where elements are inserted at the rear and removed from the front
+following FIFO order.
+
+3. Position in Hierarchy
+Iterable
+   ↓
+Collection
+   ↓
+Queue
+
+👉 Important subinterfaces:
+Deque (Double-ended queue)
+👉 Implementations:
+PriorityQueue
+ArrayDeque
+LinkedList
+
+4. Key Features of Queue
+✔ Follows FIFO
+✔ Allows duplicates
+✔ Ordered collection
+✔ Used for processing tasks in sequence
+✔ Can be implemented using arrays or linked lists
+
+5. Important Methods in Queue
+🔹 1. Adding Elements
+✅ add(E e)
+Inserts element
+Throws exception if fails
+queue.add(10);
+✅ offer(E e)
+Inserts element
+Returns false if fails
+queue.offer(20);
+🔹 2. Removing Elements
+✅ remove()
+Removes front element
+Throws exception if empty
+queue.remove();
+✅ poll()
+Removes front element
+Returns null if empty
+queue.poll();
+🔹 3. Accessing Elements
+✅ element()
+Returns front element
+Throws exception if empty
+queue.element();
+✅ peek()
+Returns front element
+Returns null if empty
+queue.peek();
+⚖️ 6. Difference (Important for Interviews)
+Method	Behavior on Empty
+add()	Exception
+offer()	false
+remove()	Exception
+poll()	null
+element()	Exception
+peek()	null
+🧠 7. Types of Queue
+🔹 1. Simple Queue
+FIFO
+🔹 2. Priority Queue
+
+👉 Elements processed based on priority, not order
+
+🔹 3. Deque (Double Ended Queue)
+
+👉 Insert/remove from both ends
+
+🚀 8. Example Program
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Queue<Integer> queue = new LinkedList<>();
+
+        queue.add(10);
+        queue.add(20);
+        queue.add(30);
+
+        System.out.println(queue.peek()); // 10
+
+        queue.poll();
+
+        System.out.println(queue);
+    }
+}
+
+
+⏱️ 9. Time Complexity
+Operation	Time
+Insert	O(1)
+Remove	O(1)
+Peek	O(1)
+
+🧩 10. Real-Life Applications
+🔹 1. CPU Scheduling
+👉 Processes executed in order
+🔹 2. Printer Queue
+👉 First document printed first
+🔹 3. Call Center Systems
+👉 Calls handled in order
+
+⚠️ 11. Limitations
+No random access ❌
+Only front/rear operations ❌
+Less flexible than List ❌
+
+🧠 12. Key Points to Remember
+FIFO structure
+Insert → rear
+Delete → front
+Methods: add, offer, remove, poll, peek
+Implemented by LinkedList, PriorityQueue
+
+🎯 Final Interview Answer
+👉 Queue is a FIFO data structure in Java where elements are inserted at the rear and removed from the front using 
+methods like add(), offer(), poll(), and peek().
+
+👉 Most asked:
+Difference: poll() vs remove()
+Difference: Queue vs Stack
+
+
+
+
+
+
+
+
+
+
+
+
+
+
