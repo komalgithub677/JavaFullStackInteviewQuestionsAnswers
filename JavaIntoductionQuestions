@@ -98,6 +98,15 @@ Easier if you know JavaScript
 Java Full Stack:
 Slightly harder (Java + Spring + DB)
 
+2. How do you compile and run a Java program from the command line, and what exactly
+happens during the compilation and execution phases?
+Answer:
+A Java program is first written as source code and compiled by the JDK’s javac compiler, which performs lexical, syntax, 
+and semantic analysis to generate platform-independent bytecode. This bytecode is then executed by the JVM. The JVM loads 
+the class using the ClassLoader, verifies it for security, prepares and initializes it, and then executes it via the 
+interpreter or JIT compiler. During execution, memory is managed through runtime data areas like heap and stack, and garbage
+collection ensures efficient memory usage. This entire architecture enables Java’s platform independence, security,
+and performance
 
 
 
