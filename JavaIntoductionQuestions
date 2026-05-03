@@ -108,6 +108,31 @@ interpreter or JIT compiler. During execution, memory is managed through runtime
 collection ensures efficient memory usage. This entire architecture enables Java’s platform independence, security,
 and performance
 
+3. Why is Java considered platform-independent, and what role do the JVM and bytecode play in achieving this?
+Answer: Java is considered platform-independent because it compiles source code into platform-neutral bytecode, which can run
+on any system equipped with a JVM. The JVM acts as an abstraction layer between the bytecode and the underlying hardware or
+operating system. During execution, the JVM loads, verifies, and executes the bytecode by either interpreting it or compiling
+it into native machine code using JIT. This architecture eliminates the need for recompilation across platforms and ensures
+portability, security, and performance
+
+4.What is the role of public, static, and void keywords in public static void main(String[] args)?
+Answer: The public static void main(String[] args) method serves as the entry point of a Java application. The public modifier ensures
+it is accessible to the JVM, static allows it to be invoked without object creation, void specifies that it does not return a
+value, main is the method name recognized by the JVM, and String[] args enables passing command-line arguments. The JVM 
+specifically looks for this exact signature to begin execution, making it a mandatory contract between the program and the
+runtime environment.
+
+5.What is the difference between == and equals() in Java?
+In Java, the == operator and the equals() method serve different purposes.
+== is used to compare reference equality, meaning it checks whether two variables point to the same memory location. On the
+other hand, equals() is used to compare logical or content equality, but only if it is properly overridden in the class.
+For primitive data types, == compares actual values, but for objects, it compares references. By default, equals() (from the
+Object class) behaves like ==, but classes like String, Integer, etc., override it to compare content.
+
+
+
+
+
 
 
 
