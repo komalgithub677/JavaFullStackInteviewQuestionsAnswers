@@ -129,7 +129,20 @@ other hand, equals() is used to compare logical or content equality, but only if
 For primitive data types, == compares actual values, but for objects, it compares references. By default, equals() (from the
 Object class) behaves like ==, but classes like String, Integer, etc., override it to compare content.
 
+6. How does exception handling work in Java, and what is the difference between checked
+exceptions, unchecked exceptions, and errors?
+Answer:
+Exception handling in Java helps prevent program crashes by handling errors using try-catch-finally.
+Checked exceptions must be handled and usually come from external issues (like files).
+Unchecked exceptions happen due to coding mistakes (like null or divide by zero).
+Errors are serious system problems that cannot usually be handled.
 
+7.What happens if we declare a StringBuffer as final, and can its value still change?
+Answer:When a StringBuffer is declared as final, it means the reference variable cannot point to a new object, but the object itself
+can still be modified. This happens because final in Java restricts only reassignment of the reference, not the internal
+state of the object.
+Since StringBuffer is a mutable class, its content can be changed using methods like append(), insert(), or delete(). 
+Therefore, even though the reference remains fixed, the value inside the object can still evolve during program execution.
 
 
 
