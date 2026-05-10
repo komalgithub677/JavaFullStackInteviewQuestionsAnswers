@@ -1,0 +1,17 @@
+Introduction to JavaScript: JavaScript is a programming language used to provide instructions to a computer. Code can be
+executed in an environment such as Visual Studio Code, which is a popular, free code editor created by Microsoft.
+Basic Syntax: Developers use console.log() to print messages to the console.
+Variables: Variables serve as containers for storing data. Rules for naming variables include:
+They are case-sensitive.
+They may only contain letters, digits, underscores, or dollar signs.
+They cannot contain spaces.
+The first character must be a letter, underscore, or dollar sign.
+Reserved words cannot be used as variable names.
+Variable Declarations:
+var: Global scope; can be re-declared and updated.
+let: Block scope; cannot be re-declared, but can be updated.
+const: Block scope; cannot be re-declared or updated.
+Data Types: JavaScript includes various primitive data types: Number, String, Boolean, Undefined, Null, BigInt, and Symbol.
+Practical Exercises: The notes include exercises on creating const objects to store specific data, such as product information 
+(e.g., pen details) and social media profile information.
+
