@@ -2,7 +2,7 @@ JDK, JRE, JVM – 50 TRICKY INTERVIEW QUESTIONS WITH WHY + TECHNICAL EXAMPLES
 
 1. What is JVM?
 Answer: JVM (Java Virtual Machine) executes Java bytecode.
-Why: It provides platform independence.
+Why: It provides platform independence.i
 Example: .class file runs on any OS with JVM.
 
 2. What is JRE?
