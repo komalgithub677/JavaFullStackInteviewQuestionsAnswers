@@ -1,0 +1,452 @@
+What is Git?
+
+Git is a Version Control System (VCS) used to track changes in source code.
+
+It helps developers:
+
+Save project history
+Work in teams
+Track changes
+Restore previous versions
+Manage multiple features
+What is GitHub?
+
+GitHub is a cloud platform where Git repositories are stored online.
+
+It is used for:
+
+Sharing code
+Team collaboration
+Backup
+Deployment
+Open-source projects
+Important Git Concepts
+1. Repository (Repo)
+
+A repository is a storage area for a project.
+
+It contains:
+
+Project files
+Git history
+Commits
+Branches
+
+Two Types:
+
+Local Repository → Stored on your computer
+Remote Repository → Stored on GitHub
+Basic Git Commands
+1. pwd
+pwd
+Theory
+
+Displays the current working directory path.
+
+Example Output
+D:\Projects\GitDemo
+2. ls
+ls
+Theory
+
+Shows files and folders inside the current directory.
+
+Example
+Login.java
+Employee.java
+3. cd
+cd folderName
+Theory
+
+Used to change directory/folder.
+
+Go Back
+cd ..
+
+Moves one folder back.
+
+4. git init
+git init
+Theory
+
+Initializes Git in the project.
+
+Internally
+
+Creates a hidden .git folder which stores:
+
+commit history
+branches
+configurations
+tracking information
+Output
+Initialized empty Git repository
+5. git status
+git status
+Theory
+
+Shows:
+
+modified files
+untracked files
+staged files
+current branch
+Most Important Command
+
+Used daily to check project state.
+
+6. git add
+git add filename
+
+OR
+
+git add .
+Theory
+
+Moves files to the staging area.
+
+Staging Area
+
+Temporary area before commit.
+
+Example
+git add Login.java
+Add All Files
+git add .
+7. git commit
+git commit -m "message"
+Theory
+
+Creates a permanent snapshot/version of the project.
+
+Commit Message
+
+Describes changes.
+
+Example
+git commit -m "Added login feature"
+Internally
+
+Git stores:
+
+file changes
+author
+timestamp
+commit id
+8. git remote add origin
+git remote add origin https://github.com/user/project.git
+Theory
+
+Connects local repository with GitHub repository.
+
+Terms
+remote → external repository
+origin → default remote name
+9. git push
+git push
+Theory
+
+Uploads local commits to GitHub.
+
+10. git push -u origin main
+git push -u origin main
+Theory
+
+First-time push command.
+
+Meaning
+-u → sets tracking
+origin → remote repository
+main → branch name
+
+After this:
+
+git push
+
+is enough.
+
+11. git branch
+git branch
+Theory
+
+Shows all branches.
+
+Output
+main
+login-feature
+12. Rename Branch
+git branch -m master main
+Theory
+
+Renames branch.
+
+13. git log
+git log
+Theory
+
+Displays commit history.
+
+Short Version
+git log --oneline
+Git Workflow
+Step-by-Step Company Flow
+Phase 1 — Team Leader Creates Project
+Step 1 — Create Project Folder
+mkdir company-project
+cd company-project
+Theory
+
+Creates project folder and enters it.
+
+Step 2 — Initialize Git
+git init
+Theory
+
+Starts Git tracking.
+
+Step 3 — Add Project Files
+
+Example:
+
+Login.java
+EmployeeService.java
+
+Check:
+
+git status
+Output
+Untracked files:
+Login.java
+EmployeeService.java
+Theory
+
+Git sees files but is not tracking them yet.
+
+Step 4 — Add to Staging
+git add .
+Theory
+
+Prepares files for commit.
+
+Step 5 — Commit
+git commit -m "Initial project setup"
+Theory
+
+Creates first project version.
+
+Step 6 — Create Main Branch
+git branch -M main
+Theory
+
+Sets main branch as primary branch.
+
+Step 7 — Connect GitHub
+git remote add origin https://github.com/company/project.git
+Check
+git remote -v
+Theory
+
+Links local repo with GitHub.
+
+Step 8 — Push to GitHub
+git push -u origin main
+Theory
+
+Uploads project to GitHub.
+
+Phase 2 — Developer Downloads Project
+Step 9 — Clone Repository
+git clone https://github.com/company/project.git
+Theory
+
+Downloads complete project from GitHub.
+
+Internally
+
+Git copies:
+
+files
+branches
+commit history
+Step 10 — Open Project
+VS Code
+code .
+Eclipse
+
+Import Existing Project.
+
+Phase 3 — Developer Starts Work
+Step 11 — Pull Latest Code
+git pull origin main
+Theory
+
+Downloads latest updates from GitHub.
+
+Step 12 — Create Feature Branch
+git checkout -b login-feature
+Theory
+
+Creates and switches to new branch.
+
+Why Branch?
+
+To work independently without affecting main code.
+
+Phase 4 — Developer Coding
+
+Developer modifies files.
+
+Check changes:
+
+git status
+Step 13 — Add Changes
+git add .
+Step 14 — Commit Changes
+git commit -m "Login feature added"
+Step 15 — Push Feature Branch
+git push origin login-feature
+Theory
+
+Uploads feature branch to GitHub.
+
+Phase 5 — TL Reviews Branches
+git branch -a
+Theory
+
+Shows:
+
+local branches
+remote branches
+Phase 6 — TL Checks Feature
+
+Switch branch:
+
+git checkout login-feature
+
+See commits:
+
+git log --oneline
+Phase 7 — Merge Branch
+
+Switch main:
+
+git checkout main
+
+Merge:
+
+git merge login-feature
+Theory
+
+Combines feature branch with main branch.
+
+Phase 8 — Confirm Merge
+git log --oneline
+Theory
+
+Verifies merged commits.
+
+Phase 9 — Delete Branch
+git branch -d login-feature
+Theory
+
+Deletes completed branch.
+
+Real Company Structure
+main → Production
+develop → Testing
+feature branches → Developer work
+
+Example:
+
+main
+ |
+develop
+ |
+ |--- login-feature
+ |--- add-employee
+ |--- delete-employee
+Important Git Areas
+1. Working Directory
+
+Current project files.
+
+2. Staging Area
+
+Temporary area before commit.
+
+3. Local Repository
+
+Stores commits in your computer.
+
+4. Remote Repository
+
+GitHub repository.
+
+Git Internal Working
+How Git Stores Data
+
+Git stores everything as:
+
+snapshots
+hashes
+objects
+
+Each commit has:
+
+unique SHA id
+author
+message
+timestamp
+What is Branch?
+
+A branch is a separate line of development.
+
+Advantage
+
+Developers can work independently.
+
+What is Merge?
+
+Merge combines changes from one branch into another.
+
+What is Clone?
+
+Clone means copying a remote repository to local machine.
+
+What is Pull?
+
+Pull means:
+
+fetch + merge
+
+Downloads latest changes and updates local project.
+
+What is Push?
+
+Push uploads local commits to remote repository.
+
+Most Used Daily Commands
+Command	Purpose
+git status	Check changes
+git add .	Add files
+git commit	Save version
+git push	Upload code
+git pull	Get latest code
+git branch	Show branches
+git checkout	Switch branch
+git merge	Merge branch
+git log	View history
+Advantages of Git
+Fast
+Distributed
+Secure
+Easy collaboration
+Tracks complete history
+Easy rollback
+Multiple developers support
+Difference Between Git and GitHub
+Git	GitHub
+Version control tool	Cloud hosting platform
+Works locally	Works online
+Tracks changes	Stores repositories
+Command-line tool	Web platform
